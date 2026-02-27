@@ -1,0 +1,9 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 5
+      arrivalRate: 30 # 30 new users every second for 5 seconds
+scenarios:
+  - flow:
+      - post:
+          url: "/api/book"
