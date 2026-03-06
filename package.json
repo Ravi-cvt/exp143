@@ -1,11 +1,9 @@
 {
-  "name": "redis-booking-system",
+  "name": "booking-system",
   "version": "1.0.0",
-  "description": "Concurrent ticket booking with Redis locking",
   "main": "booking-system.js",
   "scripts": {
-    "start": "node booking-system.js",
-    "test": "npx artillery run load-test.yml"
+    "start": "node booking-system.js"
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -1,5 +1,7 @@
-const express = require('express');
-const Redis = require('ioredis');
+const express = require("express");
+const Redis = require("ioredis");
+
+app.use(express.json());
 
 const app = express();
 const redis = new Redis(process.env.REDIS_URL);
@@ -43,3 +45,9 @@ app.post('/api/book', async (req, res) => {
 });
 
 module.exports = app;
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Booking system running on port ${PORT}`);
+});
